@@ -24,7 +24,7 @@ export default function Home() {
     <main className={styles.main}>
       <h1>Hello React!</h1>
       { dogs.map(dog => (
-        <h1>{ dog.name }</h1>
+        <h1 key={ dog._id }>{ dog.name }</h1>
       ))}
     </main>
   )
