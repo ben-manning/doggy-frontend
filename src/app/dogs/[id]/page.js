@@ -17,7 +17,7 @@ export default function Dog({ params }) {
 
     getDog()
       
-  }, []);
+  }, [ params.id ]);
 
   return (
     <div>
