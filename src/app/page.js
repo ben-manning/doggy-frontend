@@ -1,31 +1,25 @@
-'use client';
-
-import styles from './page.module.css'
-
-import { useState, useEffect } from 'react'
+import Link from "next/link";
 
 export default function Home() {
-  const [dogs, setDogs] = useState([]);
+  // const [dogs, setDogs] = useState([]);
 
-  useEffect(() => {
+  // useEffect(() => {
 
-    const getDogs = async () => {
-      const response = await fetch('https://doggy-app-backend.herokuapp.com/dogs');
-      const retrievedDogs = await response.json();
-      setDogs(retrievedDogs);
-    }
+  //   const getDogs = async () => {
+  //     const response = await fetch('https://doggy-app-backend.herokuapp.com/dogs');
+  //     const retrievedDogs = await response.json();
+  //     setDogs(retrievedDogs);
+  //   }
 
-    getDogs()
+  //   getDogs()
       
-  }, []);
+  // }, []);
 
 
   return (
-    <main className={styles.main}>
-      <h1>Hello React!</h1>
-      { dogs.map(dog => (
-        <h1 key={ dog._id }>{ dog.name }</h1>
-      ))}
+    <main>
+      <h1>Hello Index Page!</h1>
+      <Link href="/dogs">Let's see the dogs!!</Link>
     </main>
   )
 }
