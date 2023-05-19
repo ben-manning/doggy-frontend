@@ -26,7 +26,7 @@ export default function Home() {
       <h1>Hello React!</h1>
       <Link href="/"><h3>Back to Home</h3></Link>
       { dogs.map(dog => (
-        <h1 key={ dog._id }>{ dog.name }</h1>
+        <Link href={`/dogs/${ dog._id }`}><h1 key={ dog._id }>{ dog.name }</h1></Link>
       ))}
     </main>
   )
