@@ -1,13 +1,14 @@
-'use client';
+'use client'; // this allows this component us implement useEffect
 
 import { useState, useEffect } from 'react';
 import { useRouter } from "next/navigation";
 
 export default function EditDog({ params }) {
-  const [dog, setDog] = useState({ name: '', age: 0 })
 
-  const router = useRouter();
-  
+  const [dog, setDog] = useState({});
+
+  const router = useRouter()
+
   useEffect(() => {
 
     const getDog = async () => {
@@ -39,12 +40,13 @@ export default function EditDog({ params }) {
     }
   }
 
+
   return (
     <div>
       <h1>Edit Dog Form</h1>
       <form onSubmit={handleSubmit}>
       <label htmlFor="name">Name:
-        <input type="text" name="name" id="name" onChange={handleChange}  value={ dog.name } ></input>
+        <input type="text" name="name" id="name" onChange={handleChange} value={ dog.name }></input>
       </label>
       <label htmlFor="age">Age:
         <input type="number" name="age" id="age" onChange={handleChange} value={ dog.age }></input>
