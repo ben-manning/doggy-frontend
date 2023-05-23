@@ -33,10 +33,10 @@ export default function NewDogForm() {
     <div>
       <h1>New Dog Form</h1>
       <form onSubmit={handleSubmit}>
-      <label for="name">Name:
+      <label htmlFor="name">Name:
         <input type="text" name="name" id="name" onChange={handleChange} ></input>
       </label>
-      <label for="age">Age:
+      <label htmlFor="age">Age:
         <input type="number" name="age" id="age" onChange={handleChange} ></input>
       </label>
       
