@@ -1,8 +1,9 @@
 'use client';
 
-// import { redirect } from "next/navigation";
+
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import Link from 'next/link';
 
 export default function NewDogForm() {
   const [newDog, setNewDog] = useState({name: "", age: 0})
@@ -32,6 +33,7 @@ export default function NewDogForm() {
 
     <div>
       <h1>New Dog Form</h1>
+      <Link href="/dogs">Back to all dogs</Link>
       <form onSubmit={handleSubmit}>
       <label htmlFor="name">Name:
         <input type="text" name="name" id="name" onChange={handleChange} ></input>

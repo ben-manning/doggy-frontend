@@ -41,6 +41,9 @@ export default function Dog({ params }) {
       <h4>Name: { dog.name }</h4>
       <h4>Age: { dog.age }</h4>
 
+      <Link href={`/dogs/${dog._id}/edit`}>Edit this dog</Link>
+      <br></br>
+
       <button onClick={removeDog}>Remove Dog</button>
 
       <br></br>

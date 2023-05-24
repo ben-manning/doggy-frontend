@@ -25,6 +25,9 @@ export default function Home() {
     <main className={styles.main}>
       <h1>Hello React!</h1>
       <Link href="/"><h3>Back to Home</h3></Link>
+      <br></br>
+      <br></br>
+      <Link href="/dogs/new">Create A Dog</Link>
       { dogs.map(dog => (
         <Link href={`/dogs/${ dog._id }`} key={ dog._id }><h1 >{ dog.name }</h1></Link>
       ))}

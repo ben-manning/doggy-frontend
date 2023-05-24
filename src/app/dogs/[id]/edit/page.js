@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { useRouter } from "next/navigation";
+import Link from 'next/link';
 
 export default function EditDog({ params }) {
 
@@ -44,6 +45,8 @@ export default function EditDog({ params }) {
   return (
     <div>
       <h1>Edit Dog Form</h1>
+      <br></br>
+      <Link href={`/dogs/${dog._id}`}>Back to Dog</Link>
       <form onSubmit={handleSubmit}>
       <label htmlFor="name">Name:
         <input type="text" name="name" id="name" onChange={handleChange} value={ dog.name }></input>
