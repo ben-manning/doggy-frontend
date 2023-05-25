@@ -7,7 +7,7 @@ import Link from 'next/link';
 export default function Dog({ params }) {
 
   const [dog, setDog] = useState({});
-  const router = useRouter()
+  const router = useRouter();
 
   useEffect(() => {
 
@@ -24,15 +24,14 @@ export default function Dog({ params }) {
   const removeDog = async () => {
     const res = await fetch(`https://doggy-app-backend.herokuapp.com/dogs/${ params.id }`, {
       headers: { 'Content-Type' : 'application/json' },
-      method: 'DELETE',
+      method: 'DELETE'
     })
 
-    const adoptedDog = await res.json()
+    const removedDog = await res.json()
 
-    if (adoptedDog) {
+    if (removedDog) {
       router.push('/dogs')
     }
-    
   }
 
   return (
@@ -45,8 +44,8 @@ export default function Dog({ params }) {
       <br></br>
 
       <button onClick={removeDog}>Remove Dog</button>
-
       <br></br>
+
 
       <Link href="/dogs">Back to all dogs</Link>
     </div>
