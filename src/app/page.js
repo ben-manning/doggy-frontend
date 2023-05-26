@@ -18,7 +18,7 @@ export default function Home() {
 
   return (
     <main>
-      <h1>Hello Index Page!</h1>
+      <h1 className="text-3xl font-bold underline">Hello Index Page!</h1>
       <Link href="/dogs">On to the dogs!!</Link>
     </main>
   )
